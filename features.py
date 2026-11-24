@@ -1,7 +1,6 @@
 import numpy as np, pandas as pd
 
-# Removed after testing (no loss in cross-validated performance): gender, Partner, DeviceProtection,
-# OnlineBackup, StreamingTV, StreamingMovies. See the feature-selection note in the notebook.
+
 SERVICE_COLS = ["OnlineSecurity", "TechSupport"]     # the add-ons we keep
 
 NUM_COLS = ["SeniorCitizen", "tenure", "MonthlyCharges", "TotalCharges", "avg_monthly_spend",
@@ -11,7 +10,6 @@ CAT_COLS = ["Dependents", "PhoneService", "MultipleLines", "InternetService",
             "OnlineSecurity", "TechSupport", "Contract", "PaperlessBilling",
             "PaymentMethod", "tenure_group"]
 
-# The raw columns a customer record must contain (the app and batch upload check for these)
 REQUIRED_COLUMNS = ["SeniorCitizen", "Dependents", "tenure", "PhoneService", "MultipleLines",
                     "InternetService", "OnlineSecurity", "TechSupport", "Contract",
                     "PaperlessBilling", "PaymentMethod", "MonthlyCharges", "TotalCharges"]
